@@ -195,6 +195,7 @@ p{
     
     .logo{
         flex-direction: column;
+    }
     .feature{
         flex-direction: column; 
         margin: 50px 80px 20px;
