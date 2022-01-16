@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   font-family: "Roboto", sans-serif;
+  /* background-color: #AAAAAA ; */
 }
 h1 {
   font-size: 50px;
@@ -9,6 +10,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
 }
 .first-header {
@@ -37,15 +39,18 @@ main{
     margin-left: 1%;
 }
 .logos{
-   display: flex;
+   /* display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: space-between; */
+   display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row-gap: 30px;
    
 }
 .logo{
     margin-right: 55px;
     margin-bottom: 55px;
-
+    
 }
 #text-center{
     text-align: center;
@@ -70,6 +75,22 @@ main{
 .collection{
     box-shadow: 0 5px 5px 5px rgb(240, 240, 240);
 }
+.details{
+    padding-left: 20px;
+}
+#price{
+    font-size: 20px;
+}
+.filled{
+    font-size: 12px;
+    color: #FB8200;
+    padding-right: 5px;
+   
+}
+.fa-star.empty{
+    color: #AEAEAE;
+    font-size: 12px;
+}
 p{
     font-size: 14px;
     font-weight: bold;
@@ -83,6 +104,7 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 14px;
 }
 .footer-background{
     height: 180px;
@@ -92,7 +114,8 @@ p{
 .footer-section{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding: 15px;
     color: white;
 }
 .icons{
@@ -104,7 +127,79 @@ p{
 #icon{
     margin-right: 20px;
 }
+
+/* feature */
+.feature{
+    display: flex;
+    justify-content: space-between;
+   margin:100px 165px;
+   margin-left: 15%;
+}
+.feature img{
+    width: 404px;
+    height: 270px;
+}
+.feature-paragraph{
+    margin-left: 80px;
+    padding:5px;
+}
+.feature-heading{
+    font-weight: bold;
+    font-size: 32px;
+}
+.feature-button{
+    background-color: #E02C6D;
+    color:white;
+    padding: 10px 45px;
+    border: 1px solid;
+}   
+/* media quories */
+
+/* mobile devices */
 @media only screen and (max-width: 688px) {
+    .flex{
+        width:100%;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .logos{
+        grid-template-columns: repeat(2, 1fr);
         
+    }
     
+    .logo{
+        flex-direction: column;
+    }
+    .collections{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .feature{
+        flex-direction: column; 
+        margin: 50px 80px;
+    }
+    .feature-button{
+        padding:10px 20px;
+    }
+}
+
+/* tablet devices */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+
+    .collections{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .logos{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+    
+    .logo{
+        flex-direction: column;
+    .feature{
+        flex-direction: column; 
+        margin: 50px 80px 20px;
+    }
+    .feature-button{
+        padding:10px 20px 20px;
+    }
 }
